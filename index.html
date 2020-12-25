@@ -3,38 +3,14 @@
 <head>
   <title>WEB1 - Welcome</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="linkcolor.css">
-  <script>
-    function ModeHanlder(self)
-    {
-      var target =  document.querySelector('body'); //중복제거를 위함 
-      var arr = document.querySelectorAll('a');
-          if(self.value === 'DarkMode') // document.querySelector 를 대신해서 this를 쓴다.
-          {
-            target.style.backgroundColor = '#121212';
-            target.style.color = 'white';
-            self.value = 'DayMode'
-            
-            for(var i=0;i<arr.length;i++)
-              { arr[i].style.color = 'powderblue'; }
-          }
-          else
-          {
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            self.value = 'DarkMode'
-
-            for(var i=0;i<arr.length;i++)
-              { arr[i].style.color = 'blue'; }
-          }
-        }
-  </script>
+  <link rel="stylesheet" href="linkcolor.css"> <!-- css를 include-->
+  <script src="colors.js"> </script> <!-- js를 include -->
 </head>
 
 <body>
   <h1><a href="index.html">WEB</a></h1>
   <input type="button" value="DarkMode" onclick=
-  "ModeHanlder(this)";>
+  "ModeHanlder(this)";> <!-- js파일안에 내포된 함수-->
  
   <ol>
     <li><a href="1.html">HTML</a></li>
